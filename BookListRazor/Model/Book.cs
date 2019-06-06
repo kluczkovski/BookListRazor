@@ -6,7 +6,7 @@ namespace BookListRazor.Model
     public class Book
     {
         [Key]
-        public int Int { get; set; }
+        public int Id { get; set; }
 
         [Required]
         [Display(Name="Book Name")]

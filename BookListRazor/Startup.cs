@@ -33,7 +33,7 @@ namespace BookListRazor
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddDbContext<ApplicationContext>(options => options.UseMySql(Configuration.GetConnectionString("DefaultConnection"),
+            services.AddDbContext<BookListRazorDBContext>(options => options.UseMySql(Configuration.GetConnectionString("DefaultConnection"),
                     builder => builder.MigrationsAssembly("BookListRazor")));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);

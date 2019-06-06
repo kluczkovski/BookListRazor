@@ -6,8 +6,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BookListRazor.Migrations
 {
-    [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(BookListRazorDBContext))]
+    partial class BookListRazorDBContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -18,7 +18,7 @@ namespace BookListRazor.Migrations
 
             modelBuilder.Entity("BookListRazor.Model.Book", b =>
                 {
-                    b.Property<int>("Int")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Author");
@@ -28,7 +28,7 @@ namespace BookListRazor.Migrations
                     b.Property<string>("Name")
                         .IsRequired();
 
-                    b.HasKey("Int");
+                    b.HasKey("Id");
 
                     b.ToTable("Book");
                 });

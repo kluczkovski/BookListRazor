@@ -14,5 +14,14 @@
 
   <ItemGroup>
     <Folder Include="Model\" />
+    <Folder Include="Pages\BookList\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Migrations\20190603122638_AddBookToDataBase.cs" />
+    <Compile Remove="Migrations\ApplicationContextModelSnapshot.cs" />
+    <Compile Remove="Migrations\20190606113954_changeFieldBook.Designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Pages\BookList\Delete.cshtml" />
   </ItemGroup>
 </Project>

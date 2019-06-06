@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BookListRazor.Model
 {
-    public class ApplicationContext :DbContext
+    public class BookListRazorDBContext : DbContext
     {
-        public ApplicationContext(DbContextOptions<ApplicationContext>options) : base(options)
+        public BookListRazorDBContext(DbContextOptions<BookListRazorDBContext> options) : base(options)
         {
         }
 

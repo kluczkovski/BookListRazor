@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace BookListRazor.Migrations
 {
-    public partial class AddBookToDataBase : Migration
+    public partial class NewMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -11,7 +11,7 @@ namespace BookListRazor.Migrations
                 name: "Book",
                 columns: table => new
                 {
-                    Int = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(nullable: false),
                     ISBN = table.Column<string>(nullable: true),
@@ -19,7 +19,7 @@ namespace BookListRazor.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Book", x => x.Int);
+                    table.PrimaryKey("PK_Book", x => x.Id);
                 });
         }
 
